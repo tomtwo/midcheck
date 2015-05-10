@@ -3,7 +3,7 @@ var packageJSON = require('./package.json');
 var config = packageJSON.config;
 
 var checker = require('./lib/check-url')();
-var notifier = require('./lib/notify-sms');
+var notifier = require('./lib/notify-sms')();
 
 checker.onMessage(function(msg) {
     console.log("Checker: " + msg);
