@@ -22,17 +22,23 @@ It's recommended to background this process, so that it can continuously keep ch
 
 ## Configuration
 
+### env
+
+Sensitive config is passed in via env:
+
+      TWILIO_ACCOUNT_SID=<your twilio sid>
+      TWILIO_AUTH_TOKEN=<your twilio auth token>
+      TWILIO_PHONE_NUMBER=<your twilio phone number>
+      DESTINATION_NUMBER=<phone number to notify>
+
+Alternatively, put the above in a `.env` file to pass environment variables in via [dotenv](https://github.com/bkeepers/dotenv).
+
+
 ### package.json
 
-In package.json, you must configure Twilio's API credentials and the app's configuration:
+In package.json, you can configure app's configuration:
 
-      "twilio": {
-        "sid": "<YOUR SID HERE>",
-        "token": "<YOUR TOKEN HERE>",
-        "sourceNumber": "<YOUR TWILIO PHONE NUMBER HERE>"
-      },
       "config": {
-        "destinationNumbers": ["<PHONE NUMBER TO ALERT>"],
         "checkIntervalSeconds": <INTERVAL IN SECONDS TO CHECK PAGES>
       }
 
