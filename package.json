@@ -8,18 +8,14 @@
     "start": "node app.js"
   },
   "author": "tomtwo",
+  "repository": "tomtwo/midcheck",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^1.1.0",
     "request": "^2.50.0",
     "twilio": "^1.10.0"
   },
-  "twilio": {
-    "sid": "xx",
-    "token": "xx",
-    "sourceNumber": "+xx"
-  },
   "config": {
-    "destinationNumbers": ["+xx"],
     "checkIntervalSeconds": 30
   }
 }
